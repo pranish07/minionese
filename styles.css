@@ -1,49 +1,80 @@
-*{
-    margin: 0;
-    padding: 0;
-    /* display:block; */
-    box-sizing: border-box;
-}
-.container{
-   padding:0 1rem;
-}
-.container-center{
-    max-width:1000px;
-    margin:auto;
-}
-.heading,.footer{
-    padding:2rem;
-    background-color: rgb(226, 176, 26);
-}
-.footer{
-    position:absolute;
-    width:100%;
-    bottom:0;
-    text-align: center;
-}
-#txt-input{
-    width:50%;
-    margin:1rem 1rem 0 1rem;
-    padding:1.5rem;
-    height:20vh;
-    
-}
-#btn-translate{
-    margin:1rem;
-    padding:.5rem;
-    border-radius: 2rem;
-    color: white;
-    background: #000;
+:root {
+  --primary-color: rgb(226, 176, 26);
 }
 
-#txt-output{
-    width:50%;
-    height:20vh;
-    padding:1.5rem;
-    margin:1rem;
-    border: 1px solid black;
+* {
+  margin: 0;
+  padding: 0;
+  /* display:block; */
+  box-sizing: border-box;
 }
-p{
-    font-size: 1.5rem;
-    margin:0 2rem ;
+.container {
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.heading,
+.footer {
+  padding: 2rem;
+  background-color: var(--primary-color);
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+#txt-input {
+  width: 50%;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  height: 20vh;
+  resize: none;
+}
+#txt-input:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+}
+#btn-translate {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: white;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+#btn-translate:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  background: white;
+}
+
+#txt-output {
+  width: 50%;
+  height: 20vh;
+  padding: 1.5rem;
+  margin: auto;
+  border: 1px solid black;
+}
+p {
+  font-size: 1.5rem;
+  margin: 0 2rem;
+}
+
+@media only screen and (max-width: 660px){
+    #txt-input,#txt-output{
+        width:80%;
+    }
+}
+@media only screen and (max-width: 450px){
+    #txt-input,#txt-output{
+        width:95%;
+    }
 }
